@@ -1,0 +1,12 @@
+public class TransactionProcessor {
+    public boolean validateTransaction(String cardNumber, double amount) {
+        // Basic validation (e.g., card number format, sufficient funds)
+        return cardNumber.length() == 16 && amount > 0;
+    }
+
+    public static void main(String[] args) {
+        TransactionProcessor processor = new TransactionProcessor();
+        boolean valid = processor.validateTransaction("1234567890123456", 50.0);
+        System.out.println("Transaction valid: " + valid);
+    }
+}
